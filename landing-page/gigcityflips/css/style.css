@@ -47,7 +47,7 @@ nav a {
     background-size: cover;
     /* fills the area, crops as needed */
     background-position: center;
-    min-height: 70vh;
+    min-height: 50vh;
     /* 70% of the screen height */
     display: flex;
     /* center the text */
@@ -79,7 +79,7 @@ nav a {
     text-transform: uppercase;
     margin-bottom: 2rem;
 }
-.hero-content a.btn:hover{
+.btn:hover{
     color: #131313;
     background-color: var(--link-hover);
 }
@@ -90,13 +90,19 @@ nav a {
     padding: 0.75rem 2rem;
     border-radius: 6px;
 }
-.how-section h2{
-    padding: 3rem;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
+
+section {
+    padding: 4rem 0;
+}
+
 .steps {
     display: flex;
     gap: 1.5rem;
-    padding: 0 2rem;
 
 }
 
