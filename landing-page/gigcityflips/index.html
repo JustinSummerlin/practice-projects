@@ -11,19 +11,22 @@
 <body>
     <header>
         <nav>
-            <div class="container nav-links">
+            <div class="container nav-bar">
                 <img class="logo" alt="Gig City Flips" src="img/GCF-logo-Transparent.png">
-                <a href="#how">How it works</a>
-                <a href="#gallery">Our work</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">&#9776;</button>
+                <div class="nav-links">
+                    <a href="#how">How it works</a>
+                    <a href="#gallery">Our work</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
         </nav>
     </header>
     <main>
         <section id="hero" class="hero-section">
             <div class="hero-content">
-                <h1>We Buy Houses in Chattanooga</h1>
+                <h1>We Buy Houses <span class="line-break">in Chattanooga</span></h1>
                 <a href="#contact" class="btn">Get a Cash Offer</a>
             </div>
         </section>
@@ -107,9 +110,11 @@
     </main>
     <footer>
         <div class="container">
-           <p>© 2026 Gig City Flips, Inc. · Chattanooga, TN</p>
-       </div>
+            <p>© 2026 Gig City Flips, Inc. · Chattanooga, TN</p>
+        </div>
     </footer>
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>

@@ -20,18 +20,70 @@ body {
     font-family: var(--font-main);
     padding: 0px;
     margin: 0px;
+    background-color: #fff;
 }
 
 header {
     background-color: var(--bg-color)
 }
 
-.container.nav-links {
-    display: flex;
-    gap: 3.5rem;
-    align-items: center;
-
+/* Phones: links hidden until opened */
+.nav-links {
+    display: none;
+    width: 100%;
+    /* full-width row under the logo */
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    align-items: flex-end;
 }
+
+/* The hamburger button */
+.menu-toggle {
+    background: none;
+    /* removes the default gray button look */
+    border: none;
+    color: var(--brand);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* The bar: logo on the left, button or links on the right */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* lets the open menu drop below */
+    padding: 0.5rem 1.5rem;
+}
+
+.nav-links.open {
+    display: flex;
+}
+
+@media (min-width: 900px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        gap: 3.5rem;
+        padding: 0;
+        align-items: left;
+    }
+
+    .nav-bar {
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+}
+
+/* Tablets and up: no button, links in a row */
+@media (min-width: 768px) {}
 
 a {
     text-decoration: none;
@@ -68,17 +120,33 @@ nav a {
 }
 
 .hero-content h1 {
-    font-size: clamp(1.75rem, 5vw, 3rem); /* min, preferred, max */
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    /* min, preferred, max */
     text-transform: uppercase;
-    padding: 3rem;
-    text-align: left;
+    padding: 1rem;
+    text-align: center;
     margin: 0px;
+}
 
+@media (min-width:768px) {
+    .hero-content h1 {
+        padding: 3rem;
+        text-align: left;
+    }
+
+    .line-break {
+        display: block;
+        /* forces "in Chattanooga" onto its own line */
+    }
+
+    .hero-content {
+        padding: 0rem;
+    }
 }
 
 .hero-content {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 6px;
 }
 
@@ -134,6 +202,8 @@ section {
 
 .gallery {
     grid-template-columns: 1fr;
+    display: grid;
+    gap: 1rem;
 }
 
 @media (min-width: 768px) {
