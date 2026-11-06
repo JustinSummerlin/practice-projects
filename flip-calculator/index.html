@@ -9,38 +9,44 @@
 </head>
 
 <body>
-    <h1>Flip Profit Calculator</h1>
-    <div class="field">
-        <label for="purchase">Purchase price ($)</label>
-        <input type="number" id="purchase" min="0" step="1000">
-    </div>
-    <div class="field">
-        <label for="rehab">Rehab budget ($)</label>
-        <input type="number" id="rehab" min="0" step="1000">
-    </div>
-    <div class="field">
-        <label for="arv">After Repair Value ($)</label>
-        <input type="number" id="arv" min="0" step="1000">
-    </div>
-    <div class="field">
-        <label for="hold">Holding time (months)</label>
-        <input type="number" id="hold" min="0" step="1">
-    </div>
-    <div class="field">
-        <label for="holdcost">Monthly holding costs</label>
-        <input type="number" id="holdcost" min="0" step="100">
-    </div>
-    <div class="field">
-        <label for="sellcost">Selling/Closing costs($)</label>
-        <input type="number" id="sellcost" min="0" step="1000">
-    </div>
+    <main class="container">
+        <h1>Flip Profit Calculator</h1>
+        <div class="calculator">
+            <div class="inputs">
+                <div class="field">
+                    <label for="purchase">Purchase price ($)</label>
+                    <input type="number" id="purchase" min="0" step="1000">
+                </div>
+                <div class="field">
+                    <label for="rehab">Rehab budget ($)</label>
+                    <input type="number" id="rehab" min="0" step="1000">
+                </div>
+                <div class="field">
+                    <label for="arv">After Repair Value ($)</label>
+                    <input type="number" id="arv" min="0" step="1000">
+                </div>
+                <div class="field">
+                    <label for="hold">Holding time (months)</label>
+                    <input type="number" id="hold" min="0" step="1">
+                </div>
+                <div class="field">
+                    <label for="holdcost">Monthly holding costs ($)</label>
+                    <input type="number" id="holdcost" min="0" step="100">
+                </div>
+                <div class="field">
+                    <label for="sellcost">Selling/Closing costs ($)</label>
+                    <input type="number" id="sellcost" min="0" step="1000">
+                </div>
+            </div>
 
-    <div class="results">
-        <p>Total cost: <output id="total-cost">$0</output></p>
-        <p>Estimated profit: <output id="profit">$0</output></p>
-        <p>ROI: <output id="roi">0%</output></p>
-        <p>70% rule max offer: <output id="max-offer">$0</output></p>
-    </div>
+            <div class="results">
+                <p>Total cost: <output id="total-cost">$0</output></p>
+                <p>Estimated profit: <output id="profit">$0</output></p>
+                <p>ROI: <output id="roi">0%</output></p>
+                <p>70% rule max offer: <output id="max-offer">$0</output></p>
+            </div>
+        </div>
+    </main>
     <script src="js/script.js"></script>
 
 </body>
